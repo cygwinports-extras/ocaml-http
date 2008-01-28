@@ -1,0 +1,87 @@
+ocaml-http
+------------------------------------------
+OCaml HTTP is an OCaml library freely inspired from Perl's HTTP::Daemon 
+module that permits you to write simple HTTP daemons in OCaml.
+
+The main API let you define a HTTP daemon specification, which contains, 
+among other parameters, a callback function that is invoked each time a 
+request is received. The callback function will be invoked with an 
+instance of an object representing the received HTTP request and an 
+out_channel connected to the remote HTTP client socket.
+
+OCaml HTTP contains also a tiny implementation of a HTTP client which 
+can be used to retrieve resources via GET HTTP method and to iter on 
+them (useful for huge resources which can't be kept in memory).
+
+Runtime requirements:
+  ocaml-3.10.0-1
+  ocaml-netstring-2.2.9-1
+  ocaml-pcre-5.12.2-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  ocaml-findlib-1.2.1-1
+
+Canonical website:
+  http://upsilon.cc/~zack/hacking/software/ocaml-http/
+
+Canonical download:
+  http://upsilon.cc/~zack/hacking/software/ocaml-http/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-http-0.1.3-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-http-0.1.3-X.cygport all
+
+This will create:
+  /usr/src/ocaml-http-0.1.3-X-src.tar.bz2
+  /usr/src/ocaml-http-0.1.3-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/3.10/http/META
+  /usr/lib/ocaml/3.10/http/http.a
+  /usr/lib/ocaml/3.10/http/http.cma
+  /usr/lib/ocaml/3.10/http/http.cmxa
+  /usr/lib/ocaml/3.10/http/http_common.cmi
+  /usr/lib/ocaml/3.10/http/http_common.mli
+  /usr/lib/ocaml/3.10/http/http_daemon.cmi
+  /usr/lib/ocaml/3.10/http/http_daemon.mli
+  /usr/lib/ocaml/3.10/http/http_message.cmi
+  /usr/lib/ocaml/3.10/http/http_message.mli
+  /usr/lib/ocaml/3.10/http/http_mt.a
+  /usr/lib/ocaml/3.10/http/http_mt.cma
+  /usr/lib/ocaml/3.10/http/http_mt.cmxa
+  /usr/lib/ocaml/3.10/http/http_request.cmi
+  /usr/lib/ocaml/3.10/http/http_request.mli
+  /usr/lib/ocaml/3.10/http/http_response.cmi
+  /usr/lib/ocaml/3.10/http/http_response.mli
+  /usr/lib/ocaml/3.10/http/http_types.cmi
+  /usr/lib/ocaml/3.10/http/http_types.mli
+  /usr/lib/ocaml/3.10/http/http_user_agent.cmi
+  /usr/lib/ocaml/3.10/http/http_user_agent.mli
+  /usr/share/doc/ocaml-http-0.1.3/INSTALL
+  /usr/share/doc/ocaml-http-0.1.3/LICENSE
+  /usr/share/doc/ocaml-http-0.1.3/README
+
+------------------
+
+Port Notes:
+
+----- version 0.1.3-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

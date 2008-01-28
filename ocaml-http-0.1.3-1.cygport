@@ -1,0 +1,11 @@
+inherit ocaml
+
+DESCRIPTION="OCaml HTTP daemon and client library"
+HOMEPAGE="http://upsilon.cc/~zack/hacking/software/${PN}/"
+SRC_URI="http://upsilon.cc/~zack/hacking/software/${PN}/${P}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake -j1 all opt
+}

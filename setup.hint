@@ -1,0 +1,10 @@
+category: OCaml Net
+requires: ocaml ocaml-netstring ocaml-pcre
+sdesc: "OCaml HTTP daemon and client library"
+ldesc: "OCaml HTTP is an OCaml library freely inspired from Perl's 
+HTTP::Daemon module that permits you to write simple HTTP daemons in 
+OCaml.
+
+OCaml HTTP contains also a tiny implementation of a HTTP client which
+can be used to retrieve resources via GET HTTP method and to iter on
+them (useful for huge resources which can't be kept in memory)."
